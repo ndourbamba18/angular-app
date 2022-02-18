@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h1 class="text-success">About Me</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ratione laudantium labore eaque laboriosam, autem, modi aut ducimus aliquam recusandae obcaecati eos perspiciatis iusto sed animi odit blanditiis. Non, enim?</p>
+                <p>Facere tempore, ducimus consequuntur possimus impedit fuga facilis, voluptate repellat sint neque fugit iure amet assumenda vitae nulla mollitia expedita aliquid a porro in nam! Veritatis eos saepe explicabo delectus.</p>
+                <p>Iste nobis assumenda reiciendis similique eaque praesentium, dicta corrupti omnis ut labore architecto saepe laboriosam esse voluptas consequuntur? Temporibus numquam neque nesciunt cumque, unde aspernatur id incidunt consectetur. Nesciunt,
+                    saepe?
+                </p>
+                <p>Neque at delectus totam perspiciatis, dolore quae quasi? Ipsa praesentium nulla quo illo ab perspiciatis nam accusantium a, obcaecati voluptates atque aut, cupiditate vel sit maxime porro ad voluptatum accusamus.</p>
+                <p>Nobis, alias cumque repellat amet consequatur laudantium corrupti accusamus iste, recusandae provident delectus. Quaerat nesciunt, quasi perferendis facilis similique assumenda odio unde quas dolorem nemo nam neque voluptates in accusantium!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ratione laudantium labore eaque laboriosam, autem, modi aut ducimus aliquam recusandae obcaecati eos perspiciatis iusto sed animi odit blanditiis. Non, enim?</p>
+                <p>Facere tempore, ducimus consequuntur possimus impedit fuga facilis, voluptate repellat sint neque fugit iure amet assumenda vitae nulla mollitia expedita aliquid a porro in nam! Veritatis eos saepe explicabo delectus.</p>
+                <p>Iste nobis assumenda reiciendis similique eaque praesentium, dicta corrupti omnis ut labore architecto saepe laboriosam esse voluptas consequuntur? Temporibus numquam neque nesciunt cumque, unde aspernatur id incidunt consectetur. Nesciunt,
+                    saepe?
+                </p>
+                <p>Neque at delectus totam perspiciatis, dolore quae quasi? Ipsa praesentium nulla quo illo ab perspiciatis nam accusantium a, obcaecati voluptates atque aut, cupiditate vel sit maxime porro ad voluptatum accusamus.</p>
+                <p>Nobis, alias cumque repellat amet consequatur laudantium corrupti accusamus iste, recusandae provident delectus. Quaerat nesciunt, quasi perferendis facilis similique assumenda odio unde quas dolorem nemo nam neque voluptates in accusantium!</p>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <h5 class="mt-5 pt-4 pb-4 text-success text-center">Informations Of Me</h5>
+                <hr>
+                <ul *ngIf="info">
+                    <li>First Name : {{ info.firstName }}</li>
+                    <li>Last Name : {{ info.lastName }}</li>
+                    <li>Phone Number : {{ info.phone }}</li>
+                    <li>Email : {{ info.email }}</li>
+                    <li>Date Released : {{ info.dateReleased | date: 'yyyy-MM-d HH:mm:ss' }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="mb-3 text-success col-md-6">{{ title }}</h3>
+                </div>
+                <div class="col-sm-6">
+                    <a href="#addContactModal" style="float: right;" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Contact</span></a>
+
+                </div>
+            </div>
+            <!-- -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Date Released</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active text-center" *ngFor="let contact of contacts">
+                        <td>{{ contact.firstName }}</td>
+                        <td>{{ contact.lastName }}</td>
+                        <td>{{ contact.phone }}</td>
+                        <td>{{ contact.email }}</td>
+                        <td>{{ contact.dateReleased | date: 'yyyy-MM-d HH:mm:ss' }}</td>
+                        <td>
+                            <button class="btn btn-warning text-white">Update</button>
+                            <button class="btn btn-danger ml-1">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- -->
+        <div class="col-md-2 mt-5 pt-5">
+            <ul *ngIf="info">
+                <h6 class="text-success">Author Informations</h6>
+                <hr>
+                <li>{{ info.firstName }}</li>
+                <li>{{ info.lastName }}</li>
+                <li>{{ info.phone }}</li>
+                <li>{{ info.email }}</li>
+                <li>{{ info.dateReleased | date: 'yyyy-MM-d HH:mm:ss' }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Add Modal HTML -->
+<div id="addContactModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Contact</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="datetime-local" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Save Change">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
