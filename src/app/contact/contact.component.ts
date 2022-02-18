@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -19,9 +20,24 @@ export class ContactComponent implements OnInit {
     {"firstName": "Sally", "lastName": "Ndiaye", "phone": "+221778540021", "email": "ndiayesally@gmail.com", "dateReleased": new Date(), "message": ""}
   ];
 
-  constructor() { }
+  newContact = {"firstName": "", "lastName": "", "phone": "", "email": "", "dateReleased": null, "message": ""};
+
+  //deleteContact = {"firstName": "", "lastName": "", "phone": "", "email": "", "dateReleased": null, "message": ""};
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  onAddContact(newContact){
+    newContact.dateReleased=new Date();
+    this.contacts.push(newContact);
+    window.alert("Your message has been sent successfully!");
+  }
+
+  deleteContact() {
+    this.contacts = [];
+    return this.contacts;
   }
 
 }

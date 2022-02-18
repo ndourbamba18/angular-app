@@ -22,4 +22,12 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddProduct(product: Product){
+    product.dateReleased=new Date();
+    this.products.push(product);
+    //console.log(this.products);
+    console.log(product);
+    window.alert("Your product has been added successfully!");
+  }
+
 }

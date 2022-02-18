@@ -4,6 +4,5 @@ export interface Product {
   imageUrl: string;
   dateReleased: any;
   isInStock: boolean,
-  description: string,
-  message: string
+  description: string
 }
